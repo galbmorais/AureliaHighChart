@@ -1,0 +1,29 @@
+<template>
+  <h1 class="h2">Line Chart</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <line-chart type="line"
+          title="Caixa"
+          subtitle="Fluxo de Caixa"
+          title-y="Valor"
+          series.bind="data">
+        </line-chart>
+      </div>
+      <div class="col-6">
+        <form role="form">
+            <div class="btn-group">
+              <span>
+                  Data: <input type="text" class="form-control" placeholder="Data" value.bind="newDate"></input>
+              </span>
+              <span>
+                  Valor: <input type="text" class="form-control" placeholder="Valor" value.bind="newValue"></input>
+              </span>
+              <button class="btn btn-primary" href="#" type="button" click.delegate="newValueData()">ok!</button>
+            </div>
+        </form> 
+      </div>
+    </div>
+  </div>
+</template>
